@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>HUBUNGI KAMI</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #00c3fe;
+        }
+
+        h1 {
+            text-align: center;
+            color: #000000;
+        }
+
+        form {
+            max-width: 400px;
+            margin: auto;
+            background-image: url(Bahan/wp4.jpg);
+            padding: 50px;
+            border-radius: 15px;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #00c70a;
+        }
+
+        .navb {
+            background-color: #9d8e8e;
+            overflow: hidden;
+        }
+
+        .navb ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        .navb li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        .navb a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .navb a:hover {
+            color: #0059ff;
+        }
+
+        input[type="radio"] {
+            display: none;
+        }
+
+        input[type="radio"]+label {
+            position: relative;
+            padding-left: 30px;
+            cursor: pointer;
+        }
+
+        input[type="radio"]+label:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 2px;
+            width: 10px;
+            height: 10px;
+            border: 2px solid #000000;
+            border-radius: 50%;
+        }
+
+        input[type="radio"]:checked+label:before {
+            background-color: #00be10;
+        }
+
+        input[type="radio"]:checked+label {
+            font-weight: bold;
+            color: #ffffff;
+        }
+
+        .form-group {
+            display: flex;
+            align-items: center;
+        }
+
+        .form-group label {
+            flex: 1;
+            margin-right: 10px;
+        }
+
+        .form-group input[type="checkbox"] {
+            flex: 0;
+            margin: 0;
+        }
+
+        input[type="checkbox"]:checked+label:before {
+            background-color: #4CAF50;
+        }
+
+        input[type="checkbox"]:checked+label {
+            font-weight: bold;
+            color: #333;
+        }
+
+        .hobi {
+            font-size: large;
+        }
+    </style>
+
+</head>
+
+<header>
+    <nav class="navb">
+        <ul>
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="Biodata.html">Biodata</a></li>
+            <li><a href="Contact_us.html">Kontak</a></li>
+            <li><a href="Sosmed.html">Sosmed</a></li>
+        </ul>
+    </nav>
+</header>
+
+<body>
+    <h1>HUBUNGI KAMI</h1>
+    <form action="proses_form.php" method="post">
+        <label for="nama_lengkap">Nama Lengkap:</label>
+        <input type="text" id="nama_lengkap" name="nama_lengkap">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+
+        <label for="nama_pengguna">Nama Pengguna:</label>
+        <input type="text" id="nama_pengguna" name="nama_pengguna">
+
+        <label for="kata_sandi">Kata Sandi:</label>
+        <input type="password" id="kata_sandi" name="kata_sandi">
+
+        <label>Jenis Kelamin:</label>
+        <input type="radio" id="laki_laki" name="jenis_kelamin" value="Laki-laki">
+        <label for="laki_laki">Laki-laki</label>
+        <input type="radio" id="perempuan" name="jenis_kelamin" value="Perempuan">
+        <label for="perempuan">Perempuan</label>
+
+        <label for="agama">Agama:</label>
+        <select id="agama" name="agama">
+            <option value="Islam">Islam</option>
+            <option value="Kristen">Kristen</option>
+            <option value="Hindu">Hindu</option>
+            <option value="Buddha">Buddha</option>
+            <option value="Advent">Advent</option>
+            <option value="Lainnya">Lainnya</option>
+        </select>
+
+        <label for="alamat">Alamat:</label>
+        <textarea id="alamat" name="alamat" rows="4"></textarea>
+
+
+        <label class="hobi" for="Hobi">Hobi :</label>
+
+        <div class="form-group">
+            <label for="hobi_olahraga">Olahraga</label>
+            <input type="checkbox" id="hobi_olahraga" name="hobi[]" value="Olahraga">
+        </div>
+
+        <div class="form-group">
+            <label for="hobi_makan">Makan</label>
+            <input type="checkbox" id="hobi_makan" name="hobi[]" value="Makan">
+        </div>
+
+        <div class="form-group">
+            <label for="hobi_musik">Musik</label>
+            <input type="checkbox" id="hobi_musik" name="hobi[]" value="Musik">
+        </div>
+
+        <br>
+        <input type="submit" value="Simpan">
+    </form>
+</body>
+
+</html>
